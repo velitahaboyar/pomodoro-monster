@@ -1,0 +1,524 @@
+/* genel */
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: rgb(18, 18, 18);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav {
+  list-style: none;
+  line-height: 20px;
+  height: 20px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  margin: 0 10px;
+}
+
+.navbar-nav a {
+  text-decoration: none;
+}
+
+.navbar-nav a:hover img {
+  height: 85px;
+}
+
+.navbar-nav img {
+  height: 50px;
+  transition: opacity 0.3s;
+}
+
+.home-link {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+  text-decoration: none;
+}
+
+.home-link img {
+  height: 80px;
+  transition: opacity 0.3s;
+}
+
+.home-link:hover img {
+  height: 1.5s;
+}
+
+/* ilk açıklama */
+.description {
+  line-height: 2;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  margin-top: 100px;
+  width: 60%;
+  max-width: 1200px;
+  background-color: rgb(186, 73, 73);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* son açıklama */
+.description2 {
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  width: 60%;
+  max-width: 1200px;
+  background-color: rgb(186, 73, 73);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ana yapı */
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  max-width: 1180px;
+  width: 63%;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* to-do list yeri */
+.todo-container {
+  background-color: rgb(186, 73, 73);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+
+#todo-form input[type="text"] {
+  flex: 3; 
+  padding: 8px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#todo-form input[type="time"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #dfdfdf;
+  border-radius: px;
+  margin-right: 10px;
+}
+
+#in-progress-section {
+  background-color: rgb(110, 110, 110);
+}
+
+#completed-section {
+  background-color: #33922e;
+}
+
+.todo-container h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#todo-form input[type="text"] {
+  flex: 2;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #add899;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#todo-form button {
+  padding: 10px 20px;
+  font-size: 13px;
+  border: none;
+  border-radius: 35px 0px 35px 0px;
+  background-color: #4cd644;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  transition: 0.5s;
+}
+
+#todo-form button:hover {
+  border-radius: 0px 35px 0px 35px;
+  transition: 0.3s;
+}
+
+#todo-form button:hover {
+  background-color: #7cd477;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #add899;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+li.completed {
+  text-decoration: line-through;
+  background-color: #fff;
+  color: #10421cd2;
+}
+
+li:hover {
+  background-color: rgb(223, 223, 223);
+}
+
+.task-time {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+li.completed-button.delete-btn {
+  text-decoration: none;
+}
+
+button.complete-btn {
+  background-color: #add899;
+}
+
+button.complete-btn:hover {
+  background-color: #66d633;
+}
+
+button.delete-btn {
+  background-color: red;
+}
+
+button.delete-btn:hover {
+  background-color: rgb(209, 73, 73);
+}
+
+/* pomodoro Kısmı */
+.pomodoro-container {
+  background-color: rgb(110, 110, 110);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1180px;
+  max-width: 60%;
+  text-align: center;
+}
+
+.pomodoro-container h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.timer-settings {
+  margin-bottom: 20px;
+}
+
+.timer-setting-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f3f3f3;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.timer-setting-btn:hover {
+  background-color: #474747;
+  color: #fff;
+}
+
+.timer-display {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.timer-controls button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #4cd64c;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.timer-controls button:hover {
+  background-color: #7af873;
+}
+
+#pause-timer {
+  background-color: #f0ad4e;
+}
+
+#pause-timer:hover {
+  background-color: #ec971f;
+}
+
+#reset-timer {
+  background-color: #d9534f;
+}
+
+#reset-timer:hover {
+  background-color: #c9302c;
+}
+
+body {
+  transition: background-color 0.5s ease;
+}
+
+.delete-btn {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: rgb(133, 3, 3);
+}
+
+/* sidebar genel*/
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 50px;
+  width: 350px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-350px);
+}
+
+/* sidebar */
+.sidebar.active {
+  transform: translateX(0);
+}
+
+/* chat buton*/
+.toggle-button {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  z-index: 1001;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* chat room için özel stil */
+chat-room {
+  border: none;
+  border-top: 3px solid #5a72a0;
+}
+
+/* footer */
+.site-footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8em;
+  color: #333;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav li {
+    margin: 5px 0;
+  }
+
+  .description,
+  .description2 {
+    width: 90%;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    margin-top: 70px; 
+  }
+
+  .todo-container,
+  .pomodoro-container {
+    width: 90%; 
+    margin-bottom: 20px; /
+  }
+
+  #todo-form input[type="text"] {
+    width: 100px;
+  }
+  #todo-form input[type="time"] {
+    width: 50%; 
+    margin: 5px 0;
+
+  #todo-form button {
+    width: 100%; 
+  }
+
+  .sidebar {
+    width: 250px; 
+    transform: translateX(-250px); 
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .toggle-button {
+    top: 55px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-nav img,
+  .home-link img {
+    height: 40px;
+  }
+
+  .description,
+  .description2 {
+    padding: 15px;
+  }
+
+  .timer-display {
+    font-size: 2rem;
+  }
+
+  .timer-controls button,
+  .timer-setting-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* footer */
+.site-footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8em;
+  color: #333;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  #sidebar {
+    width: 300px;
+    transform: translateX(-300px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #sidebar.active {
+    transform: translateX(0);
+  }
+}
+}

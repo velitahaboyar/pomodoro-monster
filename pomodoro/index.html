@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="icon" type="image/png" href="pomodoro.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="sidebar" class="sidebar">
+      <script src="https://chitchatter.im/sdk.js"></script>
+      <chat-room
+        width="350"
+        height="97%;"
+        room="2d9bc708-1e3e-431a-8ee9-971a73152607"
+      ></chat-room>
+    </div>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar-brand"></div>
+      <ul class="navbar-nav">
+        <a href="index.html" class="home-link"
+          ><img src="pomodoro.png" alt="Anasayfa"
+        /></a>
+      </ul>
+    </nav>
+
+    <div class="description">
+      <h2>Welcome to Pomodoro Monster 👋</h2>
+      <p>
+        With its completely <u> free</u> and <i>distraction-free</i> design, you
+        can do your work in a more organized way.
+      </p>
+    </div>
+
+    <!-- ana yapı -->
+    <div class="main-container">
+      <div class="todo-container" id="pending-section">
+        <h1 style="color: whitesmoke">Adding New Tasks 🏁</h1>
+        <form id="todo-form">
+          <input type="text" id="new-task" placeholder="Enter new task" />
+          <input type="time" id="task-time" />
+          <button type="submit">Add Task</button>
+        </form>
+        <ul id="pending-tasks-list"></ul>
+      </div>
+
+      <!-- devam eden taskler -->
+      <div class="todo-container" id="in-progress-section">
+        <h1 style="color: whitesmoke">
+          In Progress 🔄<span id="in-progress-count">0</span>
+        </h1>
+        <ul id="in-progress-list"></ul>
+      </div>
+
+      <!-- biten taskler -->
+      <div class="todo-container" id="completed-section">
+        <h1 style="color: whitesmoke">
+          Completed ✔️<span id="completed-count">0</span>
+        </h1>
+        <ul id="completed-tasks-list"></ul>
+      </div>
+    </div>
+
+    <!-- pomodoro kısmı -->
+    <div class="pomodoro-container">
+      <h1 style="color: whitesmoke">Pomodoro Timer ⏲️</h1>
+
+      <div class="timer-settings">
+        <button class="timer-setting-btn" data-time="1500">25 Min</button>
+        <button class="timer-setting-btn" data-time="2400">40 Min</button>
+        <button class="timer-setting-btn" data-time="3600">60 Min</button>
+
+        <button
+          class="timer-setting-btn"
+          data-time="300"
+          data-color="rgb(56, 133, 138)"
+        >
+          Short Break
+        </button>
+        <button
+          class="timer-setting-btn"
+          data-time="900"
+          data-color="rgb(57, 112, 151)"
+        >
+          Long Break
+        </button>
+      </div>
+      <div class="timer-display">
+        <span id="timer" style="color: rgb(211, 211, 211)">25:00</span>
+      </div>
+      <div class="timer-controls">
+        <button id="start-timer">Start ▶️</button>
+        <button id="pause-timer">Pause ⏸️</button>
+        <button id="reset-timer">Reset 🟥</button>
+      </div>
+    </div>
+
+    <!-- son acıklama -->
+    <div class="description2">
+      <h2>About This Project ✏️</h2>
+      <p>
+        It was an assignment I did for a college student from 2024.<br />There
+        may be slight errors for different screen sizes.
+      </p>
+    </div>
+
+    <!-- footer -->
+    <footer class="site-footer">2024 - Made by me</footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
